@@ -1,8 +1,10 @@
 package com.example.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.entity.Product;
@@ -15,7 +17,34 @@ public class ProductService implements IProductService {
     private ProductRepository productRepo;
 
     @Override
-    public List<Product> getProductsFromDatabase() {
-        return productRepo.findAll();
+    public ResponseEntity<List<Product>> getProductsFromDatabase() {
+        List<Product> products = productRepo.findAll();
+        return ResponseEntity.ok(products);
     }
+
+    @Override
+    public Optional<Product> getProductById(int id) {
+        return productRepo.findById(id);
+    }
+
+    @Override
+    public void deleteProductById(int id) {
+        productRepo.deleteById(id);
+    }
+
+    public Product createProduct(Product newProduct) {
+        return productRepo.save(newProduct);
+    }
+
+    @Override
+    public ResponseEntity<Product> updateProduct(Integer productId, Product newProduct) {
+        Optional<Product> existingProduct = productRepo.findById(productId);
+        existingProduct.get().setPname(newProduct.getPname());
+        existingProduct.get().setPrice(newProduct.getPrice());
+        
+        productRepo.save(existingProduct.get());
+        return ResponseEntity.ok(existingProduct.get());
+    }
+
+	
 }
