@@ -3,6 +3,8 @@ package com.example.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,13 +19,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.entity.Product;
+import com.example.exception.ResourceNotFoundException;
 import com.example.service.IProductService;
+import com.example.service.ProductService;
 
 
 @RestController //http://localhost:9191/api/product
 @RequestMapping("/api")
 public class ProductController {
 
+	
 	@Autowired
 	IProductService productService;
 	
@@ -33,11 +38,14 @@ public class ProductController {
         return  productService.getProductsFromDatabase();
        
     }
+	// http://localhost:9192/api/products/101
 	@GetMapping("/products/{id}")
-	Optional<Product>FindByProductId(@PathVariable int id){
+	Optional<Product> findByProductId(@PathVariable int id) throws  ResourceNotFoundException{
 
-	return productService.getProductById(id);
+	Optional<Product> product = productService.getProductById(id);
 
+	product.orElseThrow(() -> new ResourceNotFoundException("Product not found for return product"+id));
+return product;
 	}
 	
 
@@ -57,6 +65,7 @@ public class ProductController {
     public ResponseEntity<Product> updateProduct
 	(@PathVariable(value ="id") Integer productId, @Validated @RequestBody Product newProduct) {
 
+    	
 	return productService.updateProduct(productId, newProduct);
 
 }
@@ -64,7 +73,7 @@ public class ProductController {
     //@GetMapping("/products/req")
     @GetMapping(path = "/products", produces = {MediaType.APPLICATION_XML_VALUE})
 	Optional<Product>FindByProductIdUsingRequest(@RequestBody String id){
-    	System.out.println("run");
+    	//System.out.println("run");
 	return productService.getProductById(Integer.parseInt(id));
 
 	}
