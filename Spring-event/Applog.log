@@ -1,0 +1,31 @@
+com.example.PatEvtApplication-[INFO]- 2024-07-19 14:00:28,478-Starting PatEvtApplication using Java 21.0.3 with PID 14580 (D:\SpringSTS\Workspace3\Spring-event\target\classes started by Vamsi in D:\SpringSTS\Workspace3\Spring-event)-
+com.example.PatEvtApplication-[INFO]- 2024-07-19 14:00:28,493-No active profile set, falling back to 1 default profile: "default"-
+org.springframework.data.repository.config.RepositoryConfigurationDelegate-[INFO]- 2024-07-19 14:00:29,441-Bootstrapping Spring Data JPA repositories in DEFAULT mode.-
+org.springframework.data.repository.config.RepositoryConfigurationDelegate-[INFO]- 2024-07-19 14:00:29,507-Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.-
+org.springframework.cloud.context.scope.GenericScope-[INFO]- 2024-07-19 14:00:29,728-BeanFactory id=50ae3ed0-716d-3a1c-9020-50d01f1d204d-
+org.springframework.boot.web.embedded.tomcat.TomcatWebServer-[INFO]- 2024-07-19 14:00:30,094-Tomcat initialized with port 8086 (http)-
+org.apache.catalina.core.StandardService-[INFO]- 2024-07-19 14:00:30,107-Starting service [Tomcat]-
+org.apache.catalina.core.StandardEngine-[INFO]- 2024-07-19 14:00:30,107-Starting Servlet engine: [Apache Tomcat/10.1.25]-
+org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-[INFO]- 2024-07-19 14:00:30,181-Initializing Spring embedded WebApplicationContext-
+org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-[INFO]- 2024-07-19 14:00:30,182-Root WebApplicationContext: initialization completed in 1608 ms-
+org.hibernate.jpa.internal.util.LogHelper-[INFO]- 2024-07-19 14:00:30,352-HHH000204: Processing PersistenceUnitInfo [name: default]-
+org.hibernate.Version-[INFO]- 2024-07-19 14:00:30,408-HHH000412: Hibernate ORM core version 6.5.2.Final-
+org.hibernate.cache.internal.RegionFactoryInitiator-[INFO]- 2024-07-19 14:00:30,445-HHH000026: Second-level cache disabled-
+org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo-[INFO]- 2024-07-19 14:00:30,747-No LoadTimeWeaver setup: ignoring JPA class transformer-
+com.zaxxer.hikari.HikariDataSource-[INFO]- 2024-07-19 14:00:30,776-HikariPool-1 - Starting...-
+com.zaxxer.hikari.pool.HikariPool-[INFO]- 2024-07-19 14:00:31,163-HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72237be8-
+com.zaxxer.hikari.HikariDataSource-[INFO]- 2024-07-19 14:00:31,167-HikariPool-1 - Start completed.-
+org.hibernate.orm.deprecation-[WARN]- 2024-07-19 14:00:31,232-HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)-
+org.hibernate.orm.deprecation-[WARN]- 2024-07-19 14:00:31,233-HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead-
+org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator-[INFO]- 2024-07-19 14:00:32,242-HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)-
+org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-[INFO]- 2024-07-19 14:00:32,337-Initialized JPA EntityManagerFactory for persistence unit 'default'-
+org.springframework.data.jpa.repository.query.QueryEnhancerFactory-[INFO]- 2024-07-19 14:00:32,581-Hibernate is in classpath; If applicable, HQL parser will be used.-
+org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration-[WARN]- 2024-07-19 14:00:33,110-spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning-
+org.springframework.cloud.commons.util.InetUtils-[INFO]- 2024-07-19 14:00:35,151-Cannot determine local hostname-
+org.springframework.boot.web.embedded.tomcat.TomcatWebServer-[INFO]- 2024-07-19 14:00:35,386-Tomcat started on port 8086 (http) with context path '/'-
+org.springframework.cloud.commons.util.InetUtils-[INFO]- 2024-07-19 14:00:36,402-Cannot determine local hostname-
+com.example.PatEvtApplication-[INFO]- 2024-07-19 14:00:36,422-Started PatEvtApplication in 9.488 seconds (process running for 10.428)-
+org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-[INFO]- 2024-07-19 14:00:48,801-Initializing Spring DispatcherServlet 'dispatcherServlet'-
+org.springframework.web.servlet.DispatcherServlet-[INFO]- 2024-07-19 14:00:48,801-Initializing Servlet 'dispatcherServlet'-
+org.springframework.web.servlet.DispatcherServlet-[INFO]- 2024-07-19 14:00:48,803-Completed initialization in 1 ms-
+org.springdoc.api.AbstractOpenApiResource-[INFO]- 2024-07-19 14:00:49,632-Init duration for springdoc-openapi is: 343 ms-
